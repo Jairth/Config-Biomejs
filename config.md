@@ -7,21 +7,26 @@ To install BiomeJS using `bun`, run:
 bun add --dev --exact @biomejs/biome
 ```
 
-### **Integrate Biome with your VCS/biome.json**
+### **Integrate Biome with your VCS/biome.json**\
+```
 {
   "vcs": {
     "enabled": true,
     "clientKind": "git"
   }
 }
+```
 
 ### **Configuration Biomejs**
 
-```
+
 Initialize and Configure BiomeJS
+```
 bunx biome init
+```
 
 VSCode Configuration
+```
 {
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome",
@@ -48,8 +53,9 @@ VSCode Configuration
 ```
 
 ### **biome.json**
-```
+
 Option 1: Basic Setup
+```
 {
   "organizeImports": { "enabled": true },
   "linter": {
@@ -62,8 +68,10 @@ Option 1: Basic Setup
     "lineWidth": 120
   }
 }
+```
 
 Option 2: Disable Linting and Formatting
+```
 {
   "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
   "formatter": {
@@ -77,8 +85,10 @@ Option 2: Disable Linting and Formatting
     "enabled": false
   }
 }
+```
 
 Option 3: Advanced Formatting Setup
+```
 {
   "formatter": {
     "indentStyle": "space", // default is `tab`
@@ -100,17 +110,21 @@ Option 3: Advanced Formatting Setup
 
 
 ### **BiomeJS CLI Commands**
-```
   You can format files and directories using the format command with the --write option:
+  ```
   bunx biome format --write <files>
+  ```
 
 
   You can lint and apply safe fixes to files and directories using the lint command with the --write option:
+  ```
   bunx biome lint --write <files>
+  ```
 
   The check command runs multiple tools at once. It formats, lints, and organizes imports.
+  ```
   bunx biome check --write <files>
-```
+  ```
 
 
 ### **Script en tu frontend/package.json**
@@ -126,4 +140,6 @@ Option 3: Advanced Formatting Setup
 ```
 
 ### **First-party plugins**
+```
 (https://biomejs.dev/guides/editors/first-party-plugins/)
+```
